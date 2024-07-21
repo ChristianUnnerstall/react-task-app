@@ -7,9 +7,11 @@ export default function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  function handleSave() {}
+
   return (
     <div className="app">
-<form>
+<form onSubmit={handleSave}>
         <label>
             <span>Title</span>
             <Editable
