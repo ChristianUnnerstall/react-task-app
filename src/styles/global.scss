@@ -29,8 +29,6 @@ form button {
     box-sizing: border-box;
 }
 
-
-
 .editable textarea {
     padding: 5px 4px;
     width: 100%;
@@ -65,18 +63,30 @@ label > span {
     padding-top: 6px;
 }
 
-button {
-    padding: 4px 10px
+ul {
+ margin-left:14px;
+ list-style-type: none;
+
+ li {
+    line-height: 1.8em;
+ }
 }
 
+
+
 button {
-    
+    padding: 4px 10px
 }
 
 input,
 textarea {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
+}
+
+pre {
+    margin-left: 14px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media screen and (min-width: 541px) {
