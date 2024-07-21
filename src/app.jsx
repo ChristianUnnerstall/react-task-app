@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import Editable from "./compoonents/editable";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
     const inputRef = useRef();
@@ -16,9 +17,38 @@ export default function App() {
         });
     };
 
-    const handleSave = (e) => {
+    const handleSave = async(e) => {
         e.preventDefault();
-        console.log(data)
+        try {
+			console.log(data)
+			const response = await fetch(process.env.REACT_APP_REMOTE_API_URL_BASE + '/tasks/', {
+				method: 'POST',
+				headers: {
+				  Accept: 'application/json',
+				  'Content-Type': 'application/json',
+				  "Access-Control-Allow-Origin": "*"
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (response.ok) {
+				console.log('Promise resolved and HTTP status is successful');
+				toast.success('Success!');
+			} else {
+				toast.error('Something went wrong!'); 
+				// Custom message for failed HTTP codes
+				if (response.status === 404) throw new Error('404, Not found');
+				if (response.status === 500) throw new Error('500, internal server error');
+				
+				// For any other server error
+				throw new Error(response.status);
+			  
+			}
+		} catch (error) {
+			console.error('Fetch', error);
+			// Output e.g.: "Fetch Error: 404, Not found"
+		}
+
     }
 
     const handleReset = (e) => {
@@ -31,6 +61,7 @@ export default function App() {
 
     return (
         <div className="app">
+            <Toaster />
             <h1>New Task</h1>
             <form onSubmit={handleSave}>
                 <label>
