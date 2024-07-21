@@ -15,6 +15,13 @@ body {
     flex-direction: column;
 }
 
+.app > h1 {
+    margin-left: 14px;
+}
+
+form button {
+    margin-left: 14px;
+}
 
 .editable input {
     padding: 4px 3px;
@@ -56,6 +63,14 @@ label > span {
 
 .editable.textarea .textValue {
     padding-top: 6px;
+}
+
+button {
+    padding: 4px 10px
+}
+
+button {
+    
 }
 
 input,
