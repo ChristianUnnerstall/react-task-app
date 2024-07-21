@@ -22,6 +22,14 @@ export default function App() {
         console.log(data)
     }
 
+    const handleReset = (e) => {
+        e.preventDefault();
+        setData({
+            "title": "", 
+            "description": ""
+        })
+    }
+
     return (
         <div className="app">
             <h1>New Task</h1>
@@ -63,6 +71,7 @@ export default function App() {
                     </Editable>
                 </label>
                 <button type="button" onClick={handleSave}>Save</button>
+                <button type="button" onClick={handleReset}>Reset</button>
             </form>
         </div>
     );
