@@ -11,6 +11,7 @@ export default function App() {
 
   return (
     <div className="app">
+<h1>New Task</h1>
 <form onSubmit={handleSave}>
         <label>
             <span>Title</span>
