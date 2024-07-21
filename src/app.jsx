@@ -14,7 +14,6 @@ export default function App() {
             ...data,
             [e.target.name]: e.target.value,
         });
-        console.log(data)
     };
 
     const handleSave = (e) => {
@@ -70,6 +69,7 @@ export default function App() {
                         />
                     </Editable>
                 </label>
+                
                 <button type="button" onClick={handleSave}>Save</button>
                 <button type="button" onClick={handleReset}>Reset</button>
             </form>
