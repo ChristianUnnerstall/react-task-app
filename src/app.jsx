@@ -9,6 +9,7 @@ export default function App() {
 
   return (
     <div className="app">
+<form>
         <label>
             <span>Title</span>
             <Editable
@@ -45,6 +46,8 @@ export default function App() {
                 />
             </Editable>
         </label>
+<button type="button">Save</button>
+</form>
     </div>
   );
 }
