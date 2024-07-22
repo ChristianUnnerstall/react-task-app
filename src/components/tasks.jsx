@@ -11,7 +11,7 @@ export default function Tasks() {
                     return(
                         <li key={task._id.$oid}>
                             <Link to={"/tasks/" + task._id.$oid}>
-                                <span className="title">{task.title}</span>
+                                <span className="title">{task.title}</span> <span className="status">{task.status}</span>
                             </Link>
                         </li>
                     )

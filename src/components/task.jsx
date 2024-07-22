@@ -10,6 +10,8 @@ export default function Task() {
     const [updatedData, setData] = useState(data)
     const initialData = data;
 
+    const statusOptions = ["open", "closed", "in progress", "on hold"]
+
     const handleChange = (e) => {                
         setData({
             ...updatedData,
@@ -94,6 +96,28 @@ export default function Task() {
                             value={updatedData.description}
                             onChange={handleChange}
                         />
+                    </Editable>
+                </label>
+                <label>
+                    <span>Status</span>
+                    <Editable
+                        text={updatedData.status}
+                        placeholder="Status for the task"
+                        childRef={inputRef}
+                        type="select"
+                    >
+                        <select
+                            name="status"
+                            placeholder="Status for the task"
+                            ref={inputRef}
+                            value={updatedData.status}
+                            onChange={handleChange}
+                        >
+                            {statusOptions.map((option, index) => {
+                                return (<option key={index}>{option}</option>)
+                            })}
+                            
+                        </select>
                     </Editable>
                 </label>
                 

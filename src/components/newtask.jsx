@@ -100,6 +100,27 @@ export default function NewTask() {
                         />
                     </Editable>
                 </label>
+                <label>
+                    <span>Status</span>
+                    <Editable
+                        text={data.status}
+                        placeholder="Status for the task"
+                        childRef={inputRef}
+                        type="select"
+                    >
+                        <select
+                            name="status"
+                            placeholder="Status for the task"
+                            ref={inputRef}
+                            value={data.status}
+                            onChange={handleChange}
+                        >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </Editable>
+                </label>
                 
                 <button type="button" onClick={handleSave}>Save</button>
                 <button type="button" onClick={handleReset}>Reset</button>
