@@ -60,7 +60,7 @@ export default function NewTask() {
     }
 
     return (
-        <>
+        <div className="detail">
             <Toaster />
             <h1>New Task</h1>
             <form onSubmit={handleSave}>
@@ -104,6 +104,6 @@ export default function NewTask() {
                 <button type="button" onClick={handleSave}>Save</button>
                 <button type="button" onClick={handleReset}>Reset</button>
             </form>
-        </>
+        </div>
     );
 }

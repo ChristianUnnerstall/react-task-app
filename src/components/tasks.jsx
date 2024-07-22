@@ -4,13 +4,19 @@ export default function Tasks() {
     const { data } = useLoaderData();
 
     return (
-        <>
+        <div className="detail">
             <h1>Tasks</h1>
             <ul>
                 {data.map((task) => {
-                    return(<li key={task._id.$oid}><Link to={"/tasks/" + task._id.$oid}>{task.title}</Link></li>)
+                    return(
+                        <li key={task._id.$oid}>
+                            <Link to={"/tasks/" + task._id.$oid}>
+                                <span className="title">{task.title}</span>
+                            </Link>
+                        </li>
+                    )
                 })}
             </ul>
-        </>
+        </div>
     )
 }

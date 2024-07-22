@@ -56,7 +56,7 @@ export default function Task() {
     }
 
     return (
-        <>
+        <div className="detail">
             <Toaster/>
             <h1>Task</h1>
             <form onSubmit={handleUpdate}>
@@ -100,6 +100,6 @@ export default function Task() {
                 <button type="button" onClick={handleUpdate}>Update</button>
                 <button type="button" onClick={handleReset}>Reset</button>
             </form>
-        </>
+        </div>
     )
 }
