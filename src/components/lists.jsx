@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { MdAddCard, MdOutlinePlaylistAdd } from "react-icons/md";
 
 export default function Lists() {
+
+    function handleAddList() {
+        alert("New list item placeholder!")
+    }
+
     return(
         <div>
             <div className="header">
@@ -14,7 +19,7 @@ export default function Lists() {
             </ul>
             </div>
             <div className="footer">
-                <MdOutlinePlaylistAdd />
+                <MdOutlinePlaylistAdd onClick={handleAddList}/>
             </div>
         </div>
     )
