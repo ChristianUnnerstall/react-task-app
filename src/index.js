@@ -9,11 +9,13 @@ import App from './app';
 import Tasks from './components/tasks';
 import Task from './components/task';
 import NewTask from './components/newtask';
+import Error from './components/error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: "tasks/new",
