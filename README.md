@@ -18,8 +18,9 @@ npm install
 ## Configuration
 Set environment variables
 ````
-$env:REACT_API_BACKEND_URL = "http://localhost:5000/api/v1.0/"
+$env:REACT_APP_REMOTE_API_URL_BASE = "http://localhost:5000/api/v1.0"
 ````
+
 
 ## Start
 ````
