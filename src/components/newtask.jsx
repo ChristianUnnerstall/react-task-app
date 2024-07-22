@@ -33,7 +33,7 @@ export default function NewTask() {
 
 			if (response.ok) {
 				console.log('Promise resolved and HTTP status is successful');
-				toast.success('Success!');
+				toast.success('Task created successfully!');
 			} else {
 				toast.error('Something went wrong!'); 
 				// Custom message for failed HTTP codes
