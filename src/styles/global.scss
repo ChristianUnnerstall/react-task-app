@@ -23,6 +23,14 @@ a {
     margin-left: 14px;
 }
 
+.badge {
+    background-color:#b9b9b9;
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 2px 5px;
+    margin-left: 10px;
+}
+
 form button {
     margin-left: 14px;
 }
@@ -96,8 +104,13 @@ ul {
  list-style-type: none;
 
  li {
-    line-height: 1.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
  }
+
+
 }
 
 button {
