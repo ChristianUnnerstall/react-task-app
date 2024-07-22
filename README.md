@@ -5,10 +5,6 @@ At this point the app is only displaying a simple form with some inline editing 
 
 The idea is to not use to many libraries. Create stuff on my own.
 
-Next steps are:
-- Enhance the functionality to store data using API backend
-- Make the basic app function.
-
 ## Install
 
 ````
